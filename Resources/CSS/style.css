@@ -1,0 +1,280 @@
+@charset "UTF-8";
+
+body {
+    background: #e8ebee;
+    padding: 80px 0 0 0;
+}
+
+body, input, button {
+    font-family: 'Roboto', sans-serif;
+}
+
+.noFill {
+    fill: none;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+  
+    position: fixed;
+    padding: 15px;
+    top: 0;
+    left: 0;
+    z-index: 5;
+  
+    background: #25b99a;
+    box-shadow: 0px 2px 4px rgba(44, 62, 80, 0.15);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-sizing : border-box;
+}
+
+
+header input {
+    width: 100%;
+    height: 50px;
+    right: 0px;
+    float: left;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    text-indent: 18px;
+    padding: 0 60px 0 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px 25px 25px 5px;
+    border: 0px;
+    box-shadow: none;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    box-sizing : border-box;
+    
+}
+
+header input::-webkit-input-placeholder{
+    color: rgba(255, 255, 255, 0.75);
+}
+
+header input::-moz-input-placeholder{
+    color: rgba(255, 255, 255, 0.75);
+}
+
+header input::-ms-input-placeholder{
+    color: rgba(255, 255, 255, 0.75);
+}
+
+header div input::-o-input-placeholder{
+    color: rgba(255, 255, 255, 0.75);
+}
+
+header input::input-placeholder{
+    color: rgba(255, 255, 255, 0.75);
+}
+
+header button {
+    width: 50px;
+    height: 50px;
+
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 2;
+    
+    border-radius: 25px;
+    border: 0px;
+    box-shadow: none;  
+    outline: none;  
+
+    cursor: pointer;
+    
+    box-sizing : border-box;
+
+    /* *appearance用于展示对应操作系统和浏览器支持的样式 */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+header button svg {
+    width: 70%;
+    height: 70%;
+    fill: #25b99a;
+}
+
+.container {
+    width: 100%;
+    float: left;
+    padding: 15px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+ul.todo {
+    width: 100%;
+    float: left;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+ul.todo#completed{
+    position: relative;
+    padding: 60px 0 0 0;
+    opacity: 0.5;
+}
+
+ul.todo#completed::before{
+    content: '';
+    width: 150px;
+    height: 1px;
+    background: #444;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    margin: 0 0 0 -75px;
+}
+
+ul.todo#todo:empty:after{
+    content: 'You have nothing to do yet.';
+    margin: 15px 0 0 0;
+}
+
+ul.todo#completed:empty:after{
+    content: 'You have yet to complete any task.';
+}
+
+ul.todo#todo:empty:after,
+ul.todo#completed:empty:after{
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    color:#aaa;
+    
+}
+
+ul.todo li {
+    display: block;
+    width: 100%;
+    min-height: 50px;    
+    float: left;
+    background: #fff;
+    border-radius: 7px;
+    box-shadow: 0px 1px 2px rgba(44, 62, 80, 0.10);
+    margin: 0 0 10px 0;
+
+    font-size: 14px;
+    font-weight: 500;
+    color: #444;
+    line-height: 22px;
+
+
+    position: relative;
+    margin: 0 0 10px 0;
+    padding: 14px 100px 14px 14px;
+
+    box-sizing: border-box;
+}
+
+ul.todo li:last-of-type {
+    margin: 0;
+}
+
+
+
+ul.todo li .buttons {
+    width: 100px;
+    height: 50px;
+    /* 仅当父元素的position: relative时，子元素的position:absolute 才能锁定在父元素内部*/
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    box-sizing: border-box;
+}
+
+ul.todo li .buttons button {
+    width: 50px;
+    height: 50px;
+    float: left;
+    position: relative;
+    background:none;
+    border: 0;
+    box-shadow: none;
+    outline: none;
+
+    cursor: pointer;
+    
+    /* *appearance用于展示对应操作系统和浏览器支持的样式 */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+ul.todo li .buttons button:last-of-type::before {
+    content: '';
+    width: 1px;
+    height: 30px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    background: #e8ebee;
+}
+
+ul.todo li .buttons button svg {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -15px 0 0 -15px;
+
+    /* all ready works, and have no idea why it calling syntax warning */
+    transition: background 0.2s ease; 
+}
+
+ul.todo li .buttons button.complete svg {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -11px 0 0 -11px;
+
+    border-radius: 12px;
+    border: 1.5px solid #25b99a;
+
+
+}
+
+ul.todo#completed li .buttons button.complete svg {
+    width: 22px;
+    height: 22px;
+    fill: #fff;
+    background: #25b99a;
+    border: 0px;
+    margin: -12px 0 0 -12px;
+
+}
+
+ul.todo li .buttons button svg{
+    -webkit-transition: fill 0.2s ease;
+    -moz-transition: fill 0.2s ease;
+    transition: fill 0.2s ease;
+}
+
+ul.todo li .buttons button.remove svg.icon{
+    fill: #85928f;
+}
+
+ul.todo li .buttons button.remove:hover svg.icon{
+    fill: #e85656;
+}
+
+ul.todo li .buttons button.complete svg.icon{
+    fill: #25b99a;
+}
+
+ul.todo:not(#completed) li .buttons button.complete:hover svg.icon{
+    background: rgba(37, 185, 154, 0.85);
+    fill: #fff;
+}
+

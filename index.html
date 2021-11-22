@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do App</title>
+
+    
+    <!-- Google fonts: roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- Css Style -->
+    <link rel="stylesheet" type="text/css" href="resources/CSS/reset.css">
+    <link rel="stylesheet" type="text/css" href="resources/CSS/style.css">
+</head>
+<body>
+    <header>
+        <input id="item" type="text" placeholder="Enter an activity.."/>
+        <!-- img用于插入svg, 当svg内部设定了width和height时则无法调整svg大小以适配使用, 删除后再img上设定width即可 -->
+        <button id="add" ><svg t="1637581330178" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" width="200" height="200"><path d="M512 832a32 32 0 0 0 32-32v-256h256a32 32 0 0 0 0-64h-256V224a32 32 0 0 0-64 0v256H224a32 32 0 0 0 0 64h256v256a32 32 0 0 0 32 32"></path></svg></button>
+    </header>
+    <div class="container">
+        <!-- uncomplete list -->
+        <ul class="todo" id="todo"></ul>
+        <!-- completed list -->
+        <ul class="todo" id="completed"></ul>
+    </div>
+
+    <!-- Script Files -->
+    <script src="./Resources/JS/main.js"></script>
+</body>
+</html>
