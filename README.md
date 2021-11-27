@@ -1,5 +1,14 @@
 # To-Do App
-### Give your life more meanningful than you use to be, even a trivial.
+### Give your life more meanningful than what you used to be, even a trivial.
+
+#### Some assumption.
+the basic todo task list is good for everyone to deal with their daily jobs, but not each one of us don't have the activation handle the task we planned which is not nessecerry immediately until it can't be delayed.
+So I decide to make a reward system base on the todo list.
+And here's some interesting ideas.
+- We have to make a reward system simple. no matter how the reward points it gains, you can redeem your reward points to gain what you want which had been set by yourself, and we only give some advise(for example: 50 points for a cup of starbuck.)
+- Setting to do task should be as simple as what the microsoft to do APP did. But I wish a to-do APP which could accept more complex task we need to deal with.
+- A excellent algorithm for calculation of the reward points reducing which is due to the overdue of the task.
+- Simple UI design.
 
 ## Here's the function ready to run.
 A Basic To-Do App which stored the data into the web localstorage.
