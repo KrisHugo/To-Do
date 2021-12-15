@@ -13,6 +13,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
     <!-- Css Style -->
+    <link rel="stylesheet" type="text/css" href="resources/CSS/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="resources/CSS/bootstrap.min.css">
+
     <link rel="stylesheet" type="text/css" href="resources/CSS/reset.css">
     <link rel="stylesheet" type="text/css" href="resources/CSS/style.css">
 </head>
@@ -28,8 +31,20 @@
         <!-- completed list -->
         <ul class="todo" id="completed"></ul>
     </div>
-
-    <!-- Script Files -->
-    <script src="./Resources/JS/main.js"></script>
+    <!-- Navbar 在小手机上仍然有点太长了，不过没事，试试看先，以后改为svg之后还是会太大的话再用collapse做成列表或者直接做成另一层布局 -->
+    <nav class="navbar navbar-default navbar-fixed-bottom">
+        <ul class="nav navbar-nav">
+            <li><a href="./index.html">To do</a></li>
+            <li><a href="#">Reward</a></li>
+            <li><a href="#">New</a></li>
+            <li><a href="#">Plan</a></li>
+            <li><a href="#">Profile</a></li>
+        </ul>
+      </nav>
 </body>
+    
+<!-- Script Files -->
+<script src="./Resources/JS/jquery.min.js"></script>
+<script src="./Resources/JS/bootstrap.min.js"></script>
+<script src="./Resources/JS/main.js"></script>
 </html>

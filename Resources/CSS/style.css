@@ -278,3 +278,23 @@ ul.todo:not(#completed) li .buttons button.complete:hover svg.icon{
     fill: #fff;
 }
 
+.navbar-nav {
+    margin:7.5px 0px;
+}
+.navbar ul {
+    text-align:center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.navbar li {
+    display: inline-block;
+    float: none;
+}
+.navbar li + li {
+    margin-left:10px;
+}
+.navbar li > a {
+    padding-left:12px;
+    padding-right:12px;
+}

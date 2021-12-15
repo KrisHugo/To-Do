@@ -2,7 +2,11 @@
 ### Give your life more meanningful than you use to be, even a trivial.
 
 ## Here's the function ready to run.
-A Basic To-Do App which stored the data into the web localstorage.
+- A Basic To-Do App which stored the data into the web localstorage.
+
+## Now I am going to do
+- score of  tasks
+- reward list
 
 ## Here's the update I eager to realization.
 Create and Modify some flexible Json Complex Todo Task Data, such as:

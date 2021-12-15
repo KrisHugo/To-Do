@@ -16,45 +16,45 @@ renderTodoList();
 
 // Save Data from LocalStorage
 function DataObjectUpdate(){
-    var value = JSON.stringify(data);
+    var item = JSON.stringify(data);
     // here's print!!!!
-    console.log(value);
-    localStorage.setItem('todoList', value);
+    console.log(item);
+    localStorage.setItem('todoList', item);
 }
 
 function renderTodoList(){
     if(!data.todo.length && !data.completed.length) return;
 
     for(var i = 0; i < data.todo.length; i++){
-        var value = data.todo[i];
-        addItemToDOM(value);
+        var key = data.todo[i];
+        addItemToDOM(key);
     }
 
     for(var i = 0; i < data.completed.length; i++){
-        var value = data.completed[i];
-        addItemToDOM(value, true);
+        var key = data.completed[i];
+        addItemToDOM(key, true);
     }
 }
 
 // User Click the Add Button to Add To-do Event.
 document.getElementById('add').addEventListener('click', function(){
-    var value = document.getElementById('item').value;
-    if(value) {
-        addItem(value);
+    var key = document.getElementById('item').key;
+    if(key) {
+        addItem(key);
     }  
 });
 
 document.getElementById('item').addEventListener('keydown', function(e){
-    var value = this.value;
-    if(e.code === 'Enter' && value){
-        addItem(value);
+    var key = this.key;
+    if(e.code === 'Enter' && key){
+        addItem(key);
     }
 });
 
-function addItem(value){
-    data.todo.push(value);
-    addItemToDOM(value);
-    document.getElementById('item').value = '';
+function addItem(key){
+    data.todo.push(key);
+    addItemToDOM(key);
+    document.getElementById('item').key = '';
     DataObjectUpdate();
 }
 
@@ -64,12 +64,12 @@ function removeItem(){
     var id = list.id;
 
 
-    var value = item.innerText;
+    var key = item.innerText;
     if(id === 'todo'){
-        data.todo.splice(data.todo.indexOf(value), 1);
+        data.todo.splice(data.todo.indexOf(key), 1);
     }
     else{
-        data.completed.splice(data.completed.indexOf(value), 1);
+        data.completed.splice(data.completed.indexOf(key), 1);
     }
     DataObjectUpdate();
     
@@ -84,15 +84,15 @@ function completeItem(){
     // check the task should be placed in completed list or to-do list;
     var targetList = document.getElementById((id === 'todo') ? 'completed' : 'todo');
 
-    // in the future, I'm gonna push more key->value into the 'value', so we gonna change this pos.
-    value = item.innerText;
+    // in the future, I'm gonna push more key->key into the 'key', so we gonna change this pos.
+    key = item.innerText;
     if(id === 'todo'){
-        data.todo.splice(data.todo.indexOf(value), 1);
-        data.completed.push(value);    
+        data.todo.splice(data.todo.indexOf(key), 1);
+        data.completed.push(key);    
     }
     else {
-        data.completed.splice(data.completed.indexOf(value), 1);
-        data.todo.push(value);    
+        data.completed.splice(data.completed.indexOf(key), 1);
+        data.todo.push(key);    
     }
     DataObjectUpdate();
 
