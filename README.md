@@ -12,6 +12,7 @@ And here's some interesting ideas.
 
 ## Here's the function ready to run.
 - A Basic To-Do App which stored the data into the web localstorage.
+- Put the App into the infrastruture--bootstrap to make it a responsive web.
 
 ## Now I am going to do
 - score of  tasks
